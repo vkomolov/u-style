@@ -1,8 +1,12 @@
+@import "./variables";
+
 $flex-box-row-center: row, center, center;
 $flex-box-row-between: row, space-between, center;
 $flex-box-row-left: row, flex-start, center;
+$flex-box-row-right: row, flex-end, center;
 $flex-box-row-top: row, center, flex-start;
 $flex-box-col-left: column, center, flex-start;
+$flex-box-col-right: column, center, flex-end;
 $flex-box-col-center: column, center, center;
 
 ///MIXIN
@@ -14,7 +18,7 @@ $flex-box-col-center: column, center, center;
   align-items: $align;
 }
 
-@mixin transition($property: all, $time: 0.3s) {
+@mixin transition($property: all, $time: 0.25s) {
   transition: $property $time ease-in-out;
 }
 
@@ -23,7 +27,6 @@ $flex-box-col-center: column, center, center;
     size: $font-size;
     weight: $font-weight;
   }
-  line-height: $font-size + 4px;
 }
 
 @mixin text-shadow($dim, $shadow, $color: rgba(0,0,0,0.8)) {
@@ -34,5 +37,41 @@ $flex-box-col-center: column, center, center;
   box-shadow: $dim $dim $shadow $color;
 }
 
+@mixin image-wrapper($dimension_param, $value) {
+  #{$dimension_param}: $value;
 
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
 
+    @if($dimension_param == 'width') {
+      height: auto;
+    }
+    @else {
+      width: auto;
+    }
+  }
+}
+
+@mixin scroll-init($width, $thumbColor, $trackColor) {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  /* Handle */
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: $thumbColor;
+  }
+
+  /* Track */
+  &:hover::-webkit-scrollbar-track {
+    background-color: $trackColor;
+  }
+}

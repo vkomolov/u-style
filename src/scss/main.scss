@@ -4,11 +4,167 @@
 @import "./partial/mixins";
 @import "./partial/variables";
 
-.top-wrapper {
-  max-width: $maxWidth;
-  text-align: center;
-  background: url(http://subtlepatterns.com/patterns/light_noise_diagonal.png);
-  margin: 0 auto;
-  padding: 20px;
+body {
+  font-family: "Roboto-Regular", serif;
+  color: $greyDark;
+  background-color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  //font-size: 100%;
+  //user-select: none;
+  @include transition();
+
+  /*************TOP BORDER BODY****************/
+  &:before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0,0,0,.8);
+  }
+  /*****************END TOP BORDER BODY************/
 }
 
+.top-layer {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.inner-layer {
+  max-width: $midWidth; ///media with 1280 will have rest space
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.top-header {
+  @include flex-box($flex-box-row-center...);
+  background: linear-gradient(75deg, $uStyleColor, $white 90%);
+  padding: 10px 0;
+  margin-bottom: 10px;
+
+
+  &__phone-block {
+    @include flex-box($flex-box-row-center...);
+    flex-wrap: nowrap;
+
+    .phone-icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: url("../assets/img/phone_white.png") center/cover;
+      filter: drop-shadow(0 0 4px $white);
+      margin: 0 10px;
+    }
+
+    .phone-number {
+      @include init-font(24px, 700);
+      color: $white;
+      text-shadow: 2px 2px 3px $greyDark;
+    }
+  }
+
+  &__social-block {
+    flex-grow: 1;
+    @include flex-box($flex-box-row-right...);
+
+    .social-icon {
+      width: 18px;
+      height: 18px;
+      margin-left: 10px;
+      @include transition();
+
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &.facebook {
+        background: url("../assets/img/social/facebook_icon.png") center/cover;
+      }
+
+      &.telegram {
+        background: url("../assets/img/social/telegram_icon.png") center/cover;
+      }
+
+      &.instagram {
+        background: url("../assets/img/social/instagram_icon.png") center/cover;
+      }
+    }
+  }
+}
+
+.nav-header {
+  @include flex-box($flex-box-row-center...);
+
+  &__logo-link {
+  }
+
+  &__navigation {
+    flex-grow: 1;
+    margin-left: 20px;
+    @include flex-box($flex-box-row-right...);
+
+    .header__nav__link {
+      margin: 0 20px;
+      text-decoration: none;
+      color: $uStyleDarker;
+      @include transition(all, 0.2s);
+      @include init-font(18px, 700);
+
+      &:hover {
+        transform: scale(1.05);
+        color:$uStyleGrey;
+      }
+
+      &.list {
+        position: relative;
+        cursor: pointer;
+
+        &:hover .list__sub-list {
+          opacity: 1;
+          transform: scaleY(1);
+          top: 100%;
+        }
+
+        .list__sub-list {
+          position: absolute;
+          top: 200%;
+          left: 0;
+          width: 230px;
+          color: $uStyleColor;
+          background-color: $white;
+          padding: 10px 20px 20px;
+          padding-top: 10px;
+          padding-bottom: 20px;
+          transform: scaleY(0);
+          transform-origin: 50% 100%;
+          opacity: 0;
+          @include transition();
+
+          border: 1px dotted red;
+
+          .sub-list__link {
+            @include transition();
+            @include init-font(16px, 700);
+
+            margin-top: 10px;
+            text-decoration: none;
+
+            &:hover {
+              color: $uStyleGrey;
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
