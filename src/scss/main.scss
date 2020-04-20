@@ -10,7 +10,7 @@ body {
   background-color: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //font-size: 100%;
+  font-size: 100%;
   //user-select: none;
   @include transition();
 
@@ -29,22 +29,24 @@ body {
 }
 
 .top-layer {
+  width: 100%;
+  font-size: 1rem;
   max-width: $maxWidth;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25em;
 }
 
 .inner-layer {
+  width: 100%;
   max-width: $midWidth; ///media with 1280 will have rest space
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .top-header {
   @include flex-box($flex-box-row-center...);
   background: linear-gradient(75deg, $uStyleColor, $white 90%);
-  padding: 10px 0;
-  margin-bottom: 10px;
+  padding: 0.625em 0;
+  margin-bottom: 0.625em;
 
 
   &__phone-block {
@@ -57,7 +59,7 @@ body {
       height: 18px;
       background: url("../assets/img/phone_white.png") center/cover;
       filter: drop-shadow(0 0 4px $white);
-      margin: 0 10px;
+      margin: 0 20px;
     }
 
     .phone-number {
@@ -127,27 +129,25 @@ body {
 
       &.list {
         position: relative;
+        z-index: 100;
         cursor: pointer;
 
         &:hover .list__sub-list {
           opacity: 1;
           //transform: scaleY(1);
-          ///top: 100%;
         }
 
         .list__sub-list {
           position: absolute;
+          opacity: 0;
           top: 100%;
           left: 0;
           width: 230px;
           color: $uStyleColor;
           background-color: $white;
           padding: 10px 20px 20px;
-          padding-top: 10px;
-          padding-bottom: 20px;
           //transform: scaleY(0);
           //transform-origin: 50% 100%;
-          opacity: 0;
           @include transition();
 
           .sub-list__link {
@@ -169,16 +169,46 @@ body {
   }
 }
 
-.slider {
-  background: $uStyleGrey;
-  overflow: hidden;
-  min-height: 810px;
+.slider-layer {
+  position: relative;
+  min-height: 745px;
+  background: url("../assets/img/glavnaya/disposable-clothing.jpg") center/cover;
+
   @include flex-box($flex-box-row-center...);
 
-  &__text-block {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+}
+
+#slider-text-wrapper {
+  position: relative;
+  overflow: hidden;
+
+  .slider__text-block {
+    position: absolute;
+    top: -200%;
+    left: -200%;
     color: $white;
-    width: 720px;
+    max-width: 720px;
     padding: 20px;
+    opacity: 0;
+
+    @include transition();
+
+    span  {
+      font-weight: 700;
+      sup {
+        @include init-font(14px, 700);
+      }
+    }
 
     h2 {
       @include init-font(50px, 400);
@@ -204,16 +234,11 @@ body {
         color: $white;
       }
     }
-  }
 
-  &__image-block {
-    @include image-wrapper(width, 260px);
-    border: 1px solid red;
-  }
-
-  .inner-layer {
-    width: 100%; //we have max-width from outer .inner-layer
-    @include flex-box($flex-box-row-center...);
+    &.active {
+      position: static;
+      animation: fadeIn 0.9s ease forwards;
+    }
   }
 }
 
@@ -241,15 +266,19 @@ body {
 
   &__main-text {
     display: inline-block;
-    text-align: center;
+    //text-align: center;
     max-width: 825px;
     padding: 40px 0;
     @include init-font(24px, 400);
     line-height: 28px;
 
-    span {
+    span  {
       color: $uStyleColor;
       @include init-font(28px, 700);
+
+      sup {
+        @include init-font(14px, 700);
+      }
     }
   }
 }

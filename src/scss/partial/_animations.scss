@@ -10,7 +10,7 @@
   }
 }
 
-@keyframes scaleUpZero {
+/*@keyframes scaleUpZero {
   0% {
     transform: scale(0);
   }
@@ -24,6 +24,30 @@
     transform: scale(1.0);
   }
 }
+
+@keyframes scaleUpZeroY {
+  0% {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(1.05);
+  }
+  70% {
+    transform: scaleY(0.95);
+  }
+  100% {
+    transform: scaleY(1.0);
+  }
+}
+
+@keyframes scaleUpRegularZeroY {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1.0);
+  }
+}*/
 
 @keyframes fadeIn {
   0% {
