@@ -39,6 +39,19 @@ body {
   &.colored {
     background-color: $uStyleColor;
   }
+
+  &.section_grey {
+    padding-top: 3.75em;
+    padding-bottom: 3.75em;
+    background-color: $greyLight;
+    border: 0.063em solid $uStyleGrey;
+  }
+
+  &.section_white {
+    padding-top: 3.75em;
+    padding-bottom: 3.75em;
+    background-color: $white;
+  }
 }
 
 .inner-layer {
@@ -110,10 +123,9 @@ body {
 
 .nav-header {
   font-size: 1rem;
-  align-items: flex-end;
   margin-bottom: 10px;
 
-  @include flex-box($flex-box-row-center...);
+  @include flex-box($flex-box-row-bottom...);
   @include transition();
 
   &__logo-link {
@@ -405,19 +417,84 @@ body {
   }
 }
 
-.section_grey {
-  padding: 40px 0;
-  background-color: $greyLight;
-  border: 1px solid $uStyleGrey;
+.section-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
   @include flex-box($flex-box-row-center...);
-}
 
-.section__text {
-  max-width: 570px;
-  line-height: 24px;
-  @include init-font(18px, 400);
+  &.between {
+    //@include flex-box($flex-box-row-between...);
+    justify-content: space-between !important;
 
-  p {
-    padding-bottom: 10px;
-  };
+    @media screen and (max-width: 1024px) {
+      //@include flex-box($flex-box-row-center...);
+      justify-content: center !important;
+    }
+  }
+
+  &.top {
+    @include flex-box($flex-box-row-top...);
+  }
+
+  &:hover .section-wrapper__img_block::before {
+    background-color: rgba(0,0,0,0.1);
+  }
+
+  &__heading {
+    width: 100%;
+    padding: 0 0.6em;
+    padding-bottom: 1em;
+    @include init-font(1.8em, 700);
+    color: $uStyleColor;
+  }
+  &__text_block {
+    //border: 1px solid red;
+    max-width: 570px;
+    line-height: 24px;
+    margin: 20px;
+
+    @include init-font(18px, 400);
+
+    p {
+      padding-bottom: 20px;
+      text-align: justify;
+
+      span  {
+        color: $uStyleColor;
+        font-weight: 700;
+        sup {
+          @include init-font(0.7em, 700);
+        }
+      }
+    };
+
+    &.half-size {
+      flex-basis: 45%;
+
+      @media screen and (max-width: 1024px) {
+        //max-width: 570px;
+      }
+    }
+  }
+
+  &__img_block {
+    position: relative;
+    @include image-wrapper(width, 30%);
+    max-width: 360px;
+    min-width: 300px;
+    margin: 20px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: rgba(0,0,0,0.5);
+      @include transition();
+    }
+  }
 }
