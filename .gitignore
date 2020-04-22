@@ -9,6 +9,7 @@ out
 gen
 # dependencies
 /node_modules
+/node_modules/npm
 /configuration
 /workspace
 /p2
