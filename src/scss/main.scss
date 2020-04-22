@@ -187,10 +187,14 @@ body {
         color:$uStyleGreyDarker;
       }
 
+      &.last {
+        padding-right: 0;
+      }
+
       &.list {
         position: relative;
         z-index: 100;
-        cursor: pointer;
+
 
         &:hover .list__sub-list {
           display: block;
@@ -247,6 +251,7 @@ body {
   }
 
   .header__nav__link {
+
     @media screen and (max-width: 768px) {
       width: 100%;
       margin: 5px 0;
@@ -303,6 +308,15 @@ body {
 
   @media screen and (max-width: 768px) {
     display: block;
+  }
+}
+
+#prod-list {
+  display: none;
+
+  &:checked ~ .list__sub-list {
+    display: block;
+    animation: fadeIn 0.4s ease forwards;
   }
 }
 
@@ -457,6 +471,7 @@ body {
     color: $uStyleColor;
 
     @include init-font(2em, 700);
+    @include transition();
 
     &.stress {
       @include init-font(1.5em, 700);
