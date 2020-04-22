@@ -457,6 +457,10 @@ body {
     color: $uStyleColor;
 
     @include init-font(2em, 700);
+
+    &.stress {
+      @include init-font(1.5em, 700);
+    }
   }
 
   &__text_block {
@@ -519,6 +523,13 @@ body {
   }
 }
 
+.footer-layer {
+  min-height: 600px;
+  background-color: $uStyleColor;
+  color: $white;
+  @include flex-box($flex-box-row-center...);
+}
+
 ////////OPTIONAL
 
 .push-button-20 {
@@ -527,4 +538,8 @@ body {
 
 .push-top-20 {
   margin-top: 1.25em;
+}
+
+.padding-button_clear {
+  padding-bottom: 0 !important;
 }
