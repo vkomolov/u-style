@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a7a61020-c9e8-463d-9815-45d6465f3094" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/gatsby-browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/gatsby-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/gatsby-node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/gatsby-ssr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/public/styles.e93b5499b63484750fba.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/Accordion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/Button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/DocLinks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/FoundTypo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/MobileSidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/Sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/home/DarkBlock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/home/FeatureCard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/home/Features.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/home/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/home/Terminal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/home/Windows.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/home/cubes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/home/hero.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/links.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/navbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/components/seo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/pages/404.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/templates/Page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/docs/src/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/fund.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/install/fund.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/utils/cache-file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/utils/funding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/scripts/docs-build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/scripts/update-dist-tags.js" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1auVGLKxgpu7yf49BZR1hskbejz" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Program Files/Git/bin/git.exe" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7a61020-c9e8-463d-9815-45d6465f3094" name="Default Changelist" comment="" />
+      <created>1587585368927</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587585368927</updated>
+      <workItem from="1587585371772" duration="440000" />
+      <workItem from="1587591130480" duration="30000" />
+      <workItem from="1587591296030" duration="775000" />
+      <workItem from="1587592908108" duration="816000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
