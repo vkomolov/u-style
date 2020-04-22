@@ -359,21 +359,7 @@ body {
 
     p {
       @include init-font(1.4em, 400);
-      margin-bottom: 1em;
-    }
-
-    a {
-      display: inline-block;
-      text-align: center;
-      text-decoration: none;
-      font-weight: 700;
-      color: rgba(27, 22, 156, 1);
-      @include transition();
-
-      &:hover {
-        transform: scale(1.05);
-        color: $white;
-      }
+      margin-bottom: 1.5em;
     }
 
     &.active {
@@ -384,14 +370,39 @@ body {
 }
 
 .link-button {
-  padding: 0.75em 1.875em;
-  border-radius: 0.25em;
-  background-color: rgba(255,255,255,1);
-  border: 0.125em solid $white;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 11px 25px;
+  border-radius: 4px;
+
+  @include init-font(16px, 700);
   @include transition();
 
   &:hover {
-    background-color: rgba(255,255,255,0);
+    transform: scale(1.05);
+  }
+
+  &.corp {
+    color: $uStyleColor;
+    background-color: transparent;
+    border: 0.125em solid $uStyleColor;
+
+    &:hover{
+      color: $white;
+      background-color: $uStyleColor;
+    }
+  }
+
+  &.white {
+    color: $white;
+    background-color: transparent;
+    border: 0.125em solid $white;
+
+    &:hover {
+      color: $uStyleColor;
+      background-color: $white;
+    }
   }
 }
 
@@ -439,14 +450,15 @@ body {
   }
 
   &__heading {
-    width: 100%;
-    max-width: 27em;
-    padding: 0 0.6em;
+    max-width: 25em;
     padding-bottom: 1.5em;
-    @include init-font(2em, 700);
-    color: $uStyleColor;
+    margin: 0 auto;
     text-align: center;
+    color: $uStyleColor;
+
+    @include init-font(2em, 700);
   }
+
   &__text_block {
     @include init-font(1.125em, 400);
 
@@ -456,12 +468,13 @@ body {
     padding: 0 1.25em;
 
     p {
-      padding-bottom: 1.25em;
+      padding-bottom: 1em;
       text-align: justify;
 
       span  {
         color: $uStyleColor;
         font-weight: 700;
+        font-size: 0.9em;
         sup {
           @include init-font(0.7em, 700);
         }
@@ -498,9 +511,20 @@ body {
       background-color: rgba(0,0,0,0.5);
       @include transition();
     }
-
-   /* @media screen and (max-width: 1024px) {
-      width: 70%;
-    }*/
   }
+
+  &__deaf-block {
+    width: 100%;
+    padding: 0 1.25em;
+  }
+}
+
+////////OPTIONAL
+
+.push-button-20 {
+  margin-bottom: 1.25em;
+}
+
+.push-top-20 {
+  margin-top: 1.25em;
 }
