@@ -89,7 +89,7 @@ body {
     }
 
     .phone-number {
-      @include init-font(1.5em, 700);
+      @include init-font(1.2em, 700);
       color: $white;
       text-shadow: 0.125em 0.125em 0.188em $greyDark;
     }
@@ -136,7 +136,7 @@ body {
   @include transition();
 
   &__logo-link {
-    @include image-wrapper(width, 16.25em);
+    @include image-wrapper(width, 12em);
   }
 
   &__navigation {
@@ -324,7 +324,7 @@ body {
   position: relative;
   font-size: 1rem;
   min-height: 46em;
-  background: url("../assets/img/glavnaya/disposable-clothing.jpg") center/cover;
+  background: url("../assets/img/glavnaya/disposable-medical-clothing_blur_green.png") center/cover;
 
   @include flex-box($flex-box-row-center...);
   @include transition();
@@ -337,7 +337,7 @@ body {
     content: '';
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
   }
 }
 
@@ -355,6 +355,10 @@ body {
     padding: 1.25em;
     margin-left: 4%;
     opacity: 0;
+
+    h2,p {
+      @include text-shadow(0.11em, 0.18em);
+    }
 
     @include transition();
 
@@ -465,7 +469,7 @@ body {
 
   &__heading {
     max-width: 25em;
-    padding-bottom: 1.5em;
+    padding-bottom: 1.2em;
     margin: 0 auto;
     text-align: center;
     color: $uStyleColor;
@@ -475,19 +479,28 @@ body {
 
     &.stress {
       @include init-font(1.5em, 700);
+      margin-top: 1em;
     }
   }
 
   &__text_block {
-    @include init-font(1.125em, 400);
+    @include init-font(1em, 400);
 
     max-width: 35.5em;
-    min-width: 26.9em;
+    min-width: 26.5em;
     line-height: 1.5em;
-    padding: 0 1.25em;
+    padding: 0 1.25em 1.25em;
+
+    hr {
+      background-color: $uStyleDarker;
+      width: 100%;
+      height: 0.09em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
 
     p {
-      padding-bottom: 1em;
+      //padding-bottom: 1em;
       text-align: justify;
 
       span  {
@@ -502,13 +515,29 @@ body {
 
     &.half-size {
       flex-basis: 45%;
+      min-width: 27.2em;
+      max-width: 32em;
       flex-grow: 1;
+    }
+
+    &.shadowed {
+      @include flex-box($flex-box-col-center...);
+      min-height: 15em;
+      margin: 1.5em;
+      box-shadow: 0 0 0.6em #bcbdbd;
+      border: 1px solid #bcbdbd;
+      @include transition();
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
   &__img-wrapper {
     flex-basis: 30%;
     flex-grow: 1;
+    max-width: 25em;
     margin: 1.25em;
   }
 
@@ -534,6 +563,7 @@ body {
 
   &__deaf-block {
     width: 100%;
+    max-width: 63em;
     padding: 0 1.25em;
   }
 }

@@ -29,18 +29,32 @@
   }
 }
 
+@media screen and (max-width: 865px) {
+  .section-wrapper {
+    flex-direction: column;
+
+    &.top {
+      justify-content: center;
+    }
+  }
+
+  .section-wrapper__text_block {
+    max-width: 47em !important;
+  }
+
+  .section-wrapper__deaf-block {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #slider-text-wrapper,
   .slider-layer,
   .raport-block {
     font-size: 0.8rem !important;
   }
-
-
-  .section-wrapper__deaf-block {
-    text-align: center;
-  }
 }
+
 @media screen and (max-width: 425px) {}
 @media screen and (max-width: 375px) {}
 @media screen and (max-width: 320px) {}
