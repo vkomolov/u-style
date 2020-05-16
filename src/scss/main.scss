@@ -41,7 +41,7 @@ body {
   }
 
   &.section {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding-top: 4.75em;
     padding-bottom: 4.75em;
 
@@ -129,8 +129,8 @@ body {
 }
 
 .nav-header {
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-size: 0.95rem;
+  margin-bottom: 0.8em;
 
   @include flex-box($flex-box-row-bottom...);
   @include transition();
@@ -322,9 +322,9 @@ body {
 
 .slider-layer {
   position: relative;
-  font-size: 1rem;
+  font-size: 0.95rem;
   min-height: 46em;
-  background: url("../assets/img/glavnaya/disposable-medical-clothing_blur_green.png") center/cover;
+  background: url("../assets/img/glavnaya/disposable-medical-clothing.jpg") center/cover;
 
   @include flex-box($flex-box-row-center...);
   @include transition();
@@ -343,7 +343,7 @@ body {
 
 #slider-text-wrapper {
   position: relative;
-  font-size: 1rem;
+  font-size: 0.95rem;
   overflow: hidden;
 
   .slider__text-block {
@@ -437,7 +437,7 @@ body {
   }
 
   &__main-text {
-    @include init-font(1.5em, 400);
+    @include init-font(1.2em, 400);
     display: inline-block;
     max-width: 35em;
     padding: 1.7em 0;

@@ -210,7 +210,7 @@ body {
   .top-layer.colored {
     background-color: #2b8264; }
   .top-layer.section {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding-top: 4.75em;
     padding-bottom: 4.75em;
     -webkit-transition: all 0.25s ease-in-out;
@@ -315,8 +315,8 @@ body {
         background: url("../assets/img/social/instagram_icon.png") center/cover; }
 
 .nav-header {
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-size: 0.95rem;
+  margin-bottom: 0.8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,9 +523,9 @@ body {
 
 .slider-layer {
   position: relative;
-  font-size: 1rem;
+  font-size: 0.95rem;
   min-height: 46em;
-  background: url("../assets/img/glavnaya/disposable-medical-clothing_blur_green.png") center/cover;
+  background: url("../assets/img/glavnaya/disposable-medical-clothing.jpg") center/cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,7 +553,7 @@ body {
 
 #slider-text-wrapper {
   position: relative;
-  font-size: 1rem;
+  font-size: 0.95rem;
   overflow: hidden; }
   #slider-text-wrapper .slider__text-block {
     position: absolute;
@@ -627,7 +627,7 @@ body {
     text-align: center;
     color: #2b8264; }
   .raport-block__main-text {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 400;
     display: inline-block;
     max-width: 35em;
