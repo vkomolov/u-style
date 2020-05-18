@@ -30,11 +30,19 @@
 }
 
 @media screen and (max-width: 865px) {
+  #slider-text-wrapper {
+    font-size: 0.75rem !important;
+
+    .slider__text-block {
+      margin: 0 auto;
+    }
+  }
+
   .section-wrapper {
-    flex-direction: column;
+    flex-direction: column !important;
 
     &.top {
-      justify-content: center;
+      align-items: center !important;
     }
   }
 

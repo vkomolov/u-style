@@ -46,18 +46,6 @@ body {
     padding-bottom: 4.75em;
 
     @include transition();
-
-     &.grey {
-      background-color: $greyLight;
-      border: 0.063em solid $uStyleGrey;
-      @include transition();
-    }
-
-     &.white {
-      background-color: $white;
-      border: 0.063em solid transparent;
-      @include transition();
-    }
   }
 }
 
@@ -85,7 +73,7 @@ body {
       height: 1.125em;
       background: url("../assets/img/phone_white.png") center/cover;
       filter: drop-shadow(0 0 0.25em $white);
-      margin: 0 1em;
+      margin-right: 1em;
     }
 
     .phone-number {
@@ -348,15 +336,14 @@ body {
 
   .slider__text-block {
     position: absolute;
-    top: -200%;
+    top: -200%; //hiding not active text blocks
     left: -200%;
     color: $white;
     max-width: 45em;
     padding: 1.25em;
-    margin-left: 4%;
     opacity: 0;
 
-    h2,p {
+    h1, h2, p {
       @include text-shadow(0.11em, 0.18em);
     }
 
@@ -369,15 +356,15 @@ body {
       }
     }
 
-    h2 {
-      @include init-font(2.8em, 400);
-      margin-bottom: 0.5em;
+    h1, h2 {
+      @include init-font(2.5em, 400);
+      margin-bottom: 0.8em;
       line-height: 1.1em;
     }
 
     p {
       @include init-font(1.4em, 400);
-      margin-bottom: 1.5em;
+      margin-bottom: 0.7em;
     }
 
     &.active {
@@ -393,6 +380,7 @@ body {
   text-decoration: none;
   padding: 11px 25px;
   border-radius: 4px;
+  margin-top: 1.3em;
 
   @include init-font(16px, 700);
   @include transition();
@@ -431,17 +419,17 @@ body {
   @include transition();
 
   h1 {
-    @include init-font(2.2em, 700);
+    @include init-font(2em, 700);
     text-align: center;
     color: $uStyleColor;
   }
 
   &__main-text {
-    @include init-font(1.2em, 400);
+    @include init-font(1em, 400);
     display: inline-block;
     max-width: 35em;
     padding: 1.7em 0;
-    line-height: 1.2em;
+    line-height: 1.4em;
 
     span  {
       color: $uStyleColor;
@@ -457,10 +445,9 @@ body {
 .section-wrapper {
 
   @include flex-box($flex-box-row-center...);
-  //justify-content: space-around;
 
   &.top {
-    align-items: flex-start !important;
+    align-items: flex-start;
   }
 
   &:hover .section-wrapper__img_block::before {
@@ -481,15 +468,23 @@ body {
       @include init-font(1.5em, 700);
       margin-top: 1em;
     }
+
+    span {
+      @include init-font(0.8em, 700);
+
+      sup {
+        @include init-font(0.6em, 700);
+      }
+    }
   }
 
   &__text_block {
     @include init-font(1em, 400);
 
     max-width: 35.5em;
-    min-width: 26.5em;
     line-height: 1.5em;
-    padding: 0 1.25em 1.25em;
+    padding: 0 1.25em;
+    margin-bottom: 1.5em;
 
     hr {
       background-color: $uStyleDarker;
@@ -500,7 +495,7 @@ body {
     }
 
     p {
-      //padding-bottom: 1em;
+      margin-bottom: 0.8em;
       text-align: justify;
 
       span  {
@@ -515,8 +510,8 @@ body {
 
     &.half-size {
       flex-basis: 45%;
-      min-width: 27.2em;
-      max-width: 32em;
+      //min-width: 27.2em; //will be flexed in column for narrow media
+      max-width: 31.5em;
       flex-grow: 1;
     }
 
@@ -563,8 +558,54 @@ body {
 
   &__deaf-block {
     width: 100%;
-    max-width: 63em;
     padding: 0 1.25em;
+
+    .single-text {
+      @include init-font(1em, 400);
+      line-height: 1.5em;
+      text-align: justify;
+      max-width: 43em;
+      margin: 0 auto;
+
+      &.stress {
+        color: $uStyleColor;
+      }
+    }
+  }
+
+  &__sku-group {
+    text-decoration: none;
+    color: $uStyleColor;
+    width: 17em;
+    height: 15em;
+    padding: 1.25em;
+    margin: 1em;
+    border: 1px solid $uStyleGrey;
+    overflow: hidden;
+
+    @include init-font(1em, 700);
+    line-height: 1.5em;
+    text-align: center;
+    @include box-shadow(0.2em, 0.4em);
+    @include transition();
+
+    &:hover {
+      transform: translateY(-0.5em);
+      @include box-shadow(0.4em, 0.45em);
+    }
+
+    &:hover hr {
+      transform: scaleX(1);
+    }
+
+    hr {
+      height: 2px;
+      background-color: $uStyleColor;
+      margin-top: 0.5em;
+      transform-origin: 50% 50%;
+      transform: scaleX(0); //will be shown in parent hover
+      @include transition();
+    }
   }
 }
 
@@ -576,6 +617,22 @@ body {
 }
 
 ////////OPTIONAL
+
+.justify {
+  text-align: justify;
+}
+
+.grey {
+  background-color: $greyLight;
+  border: 0.063em solid $uStyleGrey;
+  @include transition();
+}
+
+.white {
+  background-color: $white;
+  border: 0.063em solid transparent;
+  @include transition();
+}
 
 .push-button-20 {
   margin-bottom: 1.25em;
