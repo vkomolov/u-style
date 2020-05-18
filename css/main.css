@@ -519,7 +519,6 @@ body {
   position: relative;
   font-size: 0.95rem;
   min-height: 46em;
-  background: url("../assets/img/glavnaya/disposable-medical-clothing.jpg") center/cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,6 +543,10 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3); }
+  .slider-layer.main-page {
+    background: url("../assets/img/main-page/disposable-medical-clothing.jpg") center/cover; }
+  .slider-layer.cloth-page {
+    background: url("../assets/img/medical-clothes/medical-clothing.jpg") center/cover; }
 
 #slider-text-wrapper {
   position: relative;
