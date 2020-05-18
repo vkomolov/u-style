@@ -489,7 +489,7 @@ body {
     hr {
       background-color: $uStyleDarker;
       width: 100%;
-      height: 0.09em;
+      height: 2px;
       margin-top: 0.5em;
       margin-bottom: 0.5em;
     }
@@ -516,7 +516,7 @@ body {
     }
 
     &.shadowed {
-      @include flex-box($flex-box-col-center...);
+      @include flex-box($flex-box-col-left...);
       min-height: 15em;
       margin: 1.5em;
       box-shadow: 0 0 0.6em #bcbdbd;
@@ -558,6 +558,7 @@ body {
 
   &__deaf-block {
     width: 100%;
+    max-width: 63em;
     padding: 0 1.25em;
 
     .single-text {
