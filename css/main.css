@@ -515,6 +515,13 @@ body {
     -webkit-animation: fadeIn 0.4s ease forwards;
     animation: fadeIn 0.4s ease forwards; }
 
+#docs-list {
+  display: none; }
+  #docs-list:checked ~ .list__sub-list {
+    display: block;
+    -webkit-animation: fadeIn 0.4s ease forwards;
+    animation: fadeIn 0.4s ease forwards; }
+
 .slider-layer {
   position: relative;
   font-size: 0.95rem;
