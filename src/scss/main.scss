@@ -307,6 +307,14 @@ body {
     animation: fadeIn 0.4s ease forwards;
   }
 }
+#docs-list {
+  display: none;
+
+  &:checked ~ .list__sub-list {
+    display: block;
+    animation: fadeIn 0.4s ease forwards;
+  }
+}
 
 .slider-layer {
   position: relative;
