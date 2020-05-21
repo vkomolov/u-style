@@ -500,6 +500,8 @@ body {
     padding: 0 1.25em;
     margin-bottom: 1.5em;
 
+    list-style: disc inside;  //for ul tag
+
     hr {
       background-color: $uStyleDarker;
       width: 100%;
@@ -508,7 +510,7 @@ body {
       margin-bottom: 0.5em;
     }
 
-    p {
+    p, li {
       margin-bottom: 0.8em;
       text-align: justify;
 
