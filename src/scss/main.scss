@@ -123,7 +123,7 @@ body {
   @include flex-box($flex-box-row-bottom...);
   @include transition();
 
-  &__logo-link {
+  &__logo-wrapper {
     @include image-wrapper(width, 12em);
   }
 
@@ -439,9 +439,9 @@ body {
   }
 
   &__main-text {
-    @include init-font(1em, 400);
+    @include init-font(1.1em, 400);
     display: inline-block;
-    max-width: 35em;
+    max-width: 40em;
     padding: 1.7em 0;
     line-height: 1.4em;
 
@@ -465,7 +465,7 @@ body {
   }
 
   &:hover .section-wrapper__img_block::before {
-    background-color: rgba(0,0,0,0.1);
+    background-color: transparent;
   }
 
   &__heading {
@@ -492,14 +492,13 @@ body {
     }
   }
 
-  &__text_block {
+  &__text-block {
     @include init-font(1em, 400);
-
-    max-width: 35.5em;
+    width: 100%;
+    max-width: 34em;
     line-height: 1.5em;
     padding: 0 1.25em;
     margin-bottom: 1.5em;
-
     list-style: disc inside;  //for ul tag
 
     hr {
@@ -512,7 +511,6 @@ body {
 
     p, li {
       margin-bottom: 0.8em;
-      text-align: justify;
 
       span  {
         color: $uStyleColor;
@@ -524,17 +522,28 @@ body {
       }
     };
 
-    &.half-size {
-      flex-basis: 45%;
-      //min-width: 27.2em; //will be flexed in column for narrow media
-      max-width: 31.5em;
-      flex-grow: 1;
+    &.news-block {
+      font-stretch: expanded;
+
+      @include flex-box($flex-box-row-center...);
+
+      &_item {
+
+        &.image-wrapper {
+          padding-top: 2em;
+          padding-bottom: 2em;
+
+        }
+
+      }
     }
 
     &.shadowed {
-      @include flex-box($flex-box-col-left...);
+      /*@include flex-box($flex-box-col-left...);*/
       min-height: 15em;
       margin: 1.5em;
+      padding-top: 2em;
+      padding-bottom: 2em;
       box-shadow: 0 0 0.6em #bcbdbd;
       border: 1px solid #bcbdbd;
       @include transition();
@@ -545,19 +554,12 @@ body {
     }
   }
 
-  &__img-wrapper {
-    flex-basis: 30%;
-    flex-grow: 1;
-    max-width: 25em;
-    margin: 1.25em;
-  }
-
   &__img_block {
     position: relative;
-    margin: 0 auto;
+    //margin: 0 auto;
     @include image-wrapper(width, 100%);
 
-    max-width: 22.5em;
+    max-width: 25em;
     //min-width: 18.75em;
 
     &::before {
@@ -567,7 +569,7 @@ body {
       width: 100%;
       height: 100%;
       content: "";
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0,0,0,0.2);
       @include transition();
     }
   }
@@ -623,6 +625,20 @@ body {
       transform: scaleX(0); //will be shown in parent hover
       @include transition();
     }
+  }
+
+  .half-size {
+    flex-basis: 35%;
+    //min-width: 27.2em; //will be flexed in column for narrow media
+    max-width: 34em;
+    flex-grow: 1;
+  }
+
+  .three-in-line {
+    flex-basis: 25%;
+    //min-width: 27.2em; //will be flexed in column for narrow media
+    max-width: 21.7em;
+    flex-grow: 1;
   }
 }
 
