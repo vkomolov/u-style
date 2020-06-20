@@ -7,7 +7,7 @@
 
 body {
   font-family: "Roboto-Regular", serif;
-  color: $greyDark;
+  color: $greyText;
   background-color: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,8 +42,8 @@ body {
 
   &.section {
     font-size: 0.95rem;
-    padding-top: 4.75em;
-    padding-bottom: 4.75em;
+    padding-top: 6em;
+    padding-bottom: 6em;
 
     @include transition();
   }
@@ -61,57 +61,63 @@ body {
   margin-bottom: 0.625em;
   @include flex-box($flex-box-row-center...);
   @include transition();
+}
 
+.phone-block {
+  padding: 0.3em 0;
+  @include flex-box($flex-box-row-center...);
+  flex-wrap: nowrap;
 
-  &__phone-block {
-    @include flex-box($flex-box-row-center...);
-    flex-wrap: nowrap;
+  &.right {
+    justify-content: flex-start;
 
-    .phone-icon {
-      display: inline-block;
-      width: 1.125em;
-      height: 1.125em;
-      background: url("../assets/img/phone_white.png") center/cover;
-      filter: drop-shadow(0 0 0.25em $white);
-      margin-right: 1em;
-    }
-
-    .phone-number {
-      @include init-font(1.2em, 700);
-      color: $white;
-      text-shadow: 0.125em 0.125em 0.188em $greyDark;
-    }
+    @include init-font(1.2em, 700);
   }
 
-  &__social-block {
-    flex-grow: 1;
-    @include flex-box($flex-box-row-right...);
+  .phone-icon {
+    display: inline-block;
+    width: 1.125em;
+    height: 1.125em;
+    background: url("../assets/img/phone_white.png") center/cover;
+    filter: drop-shadow(0 0 0.25em $white);
+    margin-right: 1em;
+  }
 
-    .social-icon {
-      width: 18px;
-      height: 18px;
-      margin-left: 10px;
-      @include transition();
+  .phone-number {
+    @include init-font(1.2em, 700);
+    color: $white;
+    text-shadow: 0.125em 0.125em 0.188em $greyDark;
+  }
+}
 
-      &:not(:last-of-type) {
-        margin-right: 10px;
-      }
+.social-block {
+  flex-grow: 1;
+  @include flex-box($flex-box-row-right...);
 
-      &:hover {
-        transform: scale(1.2);
-      }
+  .social-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    @include transition();
 
-      &.facebook {
-        background: url("../assets/img/social/facebook_icon.png") center/cover;
-      }
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
 
-      &.telegram {
-        background: url("../assets/img/social/telegram_icon.png") center/cover;
-      }
+    &:hover {
+      transform: scale(1.2);
+    }
 
-      &.instagram {
-        background: url("../assets/img/social/instagram_icon.png") center/cover;
-      }
+    &.facebook {
+      background: url("../assets/img/social/facebook_icon.png") center/cover;
+    }
+
+    &.telegram {
+      background: url("../assets/img/social/telegram_icon.png") center/cover;
+    }
+
+    &.instagram {
+      background: url("../assets/img/social/instagram_icon.png") center/cover;
     }
   }
 }
@@ -136,7 +142,7 @@ body {
       display: none;
 
       &:checked ~ #burger-list {
-        display: flex;
+        display: flex !important;
         position: absolute;
         flex-direction: column;
         padding: 20px 0;
@@ -166,9 +172,10 @@ body {
     .header__nav__link {
       padding: 0 1.25em;
       text-decoration: none;
+      text-transform: uppercase;
       color: $uStyleDarker;
       @include transition(all, 0.2s);
-      @include init-font(1.125em, 700);
+      @include init-font(1em, 700);
 
       &:hover {
         transform: scale(1.05);
@@ -186,7 +193,8 @@ body {
 
         &:hover .list__sub-list {
           display: block;
-          animation: fadeIn 0.4s ease forwards;
+          //animation: fadeIn 0.4s ease forwards;
+          opacity: 1;
         }
 
         .list__sub-list {
@@ -209,7 +217,7 @@ body {
 
           .sub-list__link {
             @include transition();
-            @include init-font(1em, 400);
+            @include init-font(0.8em, 400);
 
             width: 100%;
             margin-top: 0.29em;
@@ -234,23 +242,6 @@ body {
   @include flex-box($flex-box-row-center...);
   @include transition();
 
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-
-  .header__nav__link {
-
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      margin: 5px 0;
-
-      &:hover {
-        transform: scale(1);
-        background-color: $uStyleColor;
-        color: $white;
-      }
-    }
-  }
 }
 
 #menu-burger {
@@ -293,10 +284,6 @@ body {
       @include transition();
     }
   }
-
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
 }
 
 #prod-list {
@@ -307,6 +294,7 @@ body {
     animation: fadeIn 0.4s ease forwards;
   }
 }
+
 #docs-list {
   display: none;
 
@@ -432,7 +420,7 @@ body {
   text-align: center;
   @include transition();
 
-  h1 {
+  h1, h2 {
     @include init-font(2em, 700);
     text-align: center;
     color: $uStyleColor;
@@ -457,8 +445,10 @@ body {
 }
 
 .section-wrapper {
-
+  @include init-font(1em, 400);
   @include flex-box($flex-box-row-center...);
+
+  line-height: 1.6em;
 
   &.top {
     align-items: flex-start;
@@ -469,9 +459,8 @@ body {
   }
 
   &__heading {
-    max-width: 25em;
-    padding-bottom: 1.2em;
     margin: 0 auto;
+    margin-bottom: 2em;
     text-align: center;
     color: $uStyleColor;
 
@@ -484,7 +473,7 @@ body {
     }
 
     span {
-      @include init-font(0.8em, 700);
+      @include init-font(0.9em, 700);
 
       sup {
         @include init-font(0.6em, 700);
@@ -493,12 +482,10 @@ body {
   }
 
   &__text-block {
-    @include init-font(1em, 400);
     width: 100%;
-    max-width: 34em;
-    line-height: 1.5em;
+    max-width: 33em;
     padding: 0 1.25em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.25em;
     list-style: disc inside;  //for ul tag
 
     hr {
@@ -522,19 +509,33 @@ body {
       }
     };
 
-    &.news-block {
+    &.link-block {
+      text-decoration: none;
       font-stretch: expanded;
+      overflow: hidden;
+      padding-top: 4em !important;
+      min-height: 45em !important;
 
-      @include flex-box($flex-box-row-center...);
-
-      &_item {
+      .link-block__item {
 
         &.image-wrapper {
-          padding-top: 2em;
-          padding-bottom: 2em;
-
+          @include image-wrapper(width, 100%);
         }
 
+        &.text-wrapper {
+
+          h3 {
+            margin-top: 2em;
+            margin-bottom: 1em;
+          }
+
+          hr {
+            background-color: $uStyleDarker;
+            width: 100%;
+            height: 2px;
+            margin-bottom: 0.8em;
+          }
+        }
       }
     }
 
@@ -574,20 +575,40 @@ body {
     }
   }
 
+  &__img_wrapper {
+    position: relative;
+    //margin: 0 auto;
+    @include image-wrapper(width, 100%);
+
+    max-width: 30em;
+    //min-width: 18.75em;
+  }
+
   &__deaf-block {
     width: 100%;
-    max-width: 63em;
     padding: 0 1.25em;
+
+    &.limited {
+      max-width: 68em;
+    }
 
     .single-text {
       @include init-font(1em, 400);
-      line-height: 1.5em;
-      text-align: justify;
-      max-width: 43em;
+      line-height: 1.4em;
+      max-width: 53em;
       margin: 0 auto;
+      margin-bottom: 1.7em;
 
-      &.stress {
+      &.colored {
         color: $uStyleColor;
+      }
+
+      &.center {
+        text-align: center;
+      }
+
+      &.bigger {
+        @include init-font(1.25em, 400);
       }
     }
   }
@@ -596,7 +617,7 @@ body {
     text-decoration: none;
     color: $uStyleColor;
     width: 17em;
-    height: 15em;
+    height: 12em;
     padding: 1.25em;
     margin: 1em;
     border: 1px solid $uStyleGrey;
@@ -627,6 +648,12 @@ body {
     }
   }
 
+/*  .regular-text {
+    max-width: 66em;
+    margin: 0 auto;
+    margin-bottom: 0.7em;
+  }*/
+
   .half-size {
     flex-basis: 35%;
     //min-width: 27.2em; //will be flexed in column for narrow media
@@ -637,14 +664,45 @@ body {
   .three-in-line {
     flex-basis: 25%;
     //min-width: 27.2em; //will be flexed in column for narrow media
-    max-width: 21.7em;
+    //max-width: 21.7em;
     flex-grow: 1;
+  }
+
+  .flex-row {
+
+  }
+}
+
+#question-form {
+margin-top: 2em;
+
+  .input-text {
+    @include init-font(1.1em, 400);
+
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+  }
+
+  .question-form__heading {
+    margin-bottom: 0.5em;
+    color: $uStyleColor
+  }
+
+  .question-form__content {
+    @include init-font(1.5em, 400);
+    width: 100%;
+    min-height: 20em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    padding: 0.8em;
   }
 }
 
 .footer-layer {
-  min-height: 600px;
-  background-color: $uStyleColor;
+  min-height: 110px;
+  background-color: $uStyleDarker;
   color: $white;
   @include flex-box($flex-box-row-center...);
 }
@@ -667,12 +725,12 @@ body {
   @include transition();
 }
 
-.push-button-20 {
-  margin-bottom: 1.25em;
+.push-button-25 {
+  margin-bottom: 1.25em !important;
 }
 
 .push-top-20 {
-  margin-top: 1.25em;
+  margin-top: 1.25em !important;
 }
 
 .padding-button_clear {
