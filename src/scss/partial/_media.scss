@@ -32,7 +32,15 @@
   }
 
   .section-wrapper__heading {
-    font-size: 1.8em !important;
+    font-size: 1.7em !important;
+
+    &.norm-size {
+      font-size: 1.4em !important;
+    }
+
+    &.stress {
+      font-size: 1.4em !important;
+    }
   }
 }
 
@@ -59,6 +67,10 @@
     &.flex-row {
       flex-direction: row !important;
     }
+  }
+
+  .section-wrapper__heading.norm-size {
+    text-align: center !important;
   }
 
   .section-wrapper__img_block {

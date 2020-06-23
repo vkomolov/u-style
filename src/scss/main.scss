@@ -478,6 +478,7 @@ body {
 
     &.norm-size {
       @include init-font(1.5em, 700);
+      margin-bottom: 0;
     }
 
     span {
@@ -724,6 +725,10 @@ margin-top: 2em;
 
 .push-top-20 {
   margin-top: 1.25em !important;
+}
+
+.push-top-2em {
+  margin-top: 2em !important;
 }
 
 .padding-button_clear {
