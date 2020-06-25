@@ -4,8 +4,6 @@
 
 @media screen and (max-width: 1280px) and (min-width: 1281px) {
   .top-header,
-  .slider-layer,
-  #slider-text-wrapper,
   .raport-block {
     font-size: 0.90rem !important;
   }
@@ -21,8 +19,6 @@
 
 @media screen and (max-width: 1024px) {
   .top-header,
-  .slider-layer,
-  #slider-text-wrapper,
   .raport-block  {
     font-size: 0.85rem !important;
   }
@@ -45,13 +41,6 @@
 }
 
 @media screen and (max-width: 865px) {
-  #slider-text-wrapper {
-    font-size: 0.8rem !important;
-
-    .slider__text-block {
-      margin: 0 auto;
-    }
-  }
 
   .nav-header {
     font-size: 0.75rem !important;
@@ -88,8 +77,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  #slider-text-wrapper,
-  .slider-layer,
   .raport-block {
     font-size: 0.8rem !important;
   }

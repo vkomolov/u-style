@@ -333,45 +333,22 @@ body {
 
 #slider-text-wrapper {
   position: relative;
-  font-size: 0.95rem;
   overflow: hidden;
 
   .slider__text-block {
-    position: absolute;
-    top: -200%; //hiding not active text blocks
-    left: -200%;
-    color: $white;
-    max-width: 50em;
-    padding: 1.25em;
-    opacity: 0;
+    font-family: "Nunito-Regular", serif;
+    @include text-shadow(0.25em, 0.25em);
 
-    h1, h2, p {
-      @include text-shadow(0.11em, 0.18em);
+    &__head {
+      color: $white;
+      @include init-font(3rem, 700);
     }
 
-    @include transition();
+    &__tale {
+      color: $white;
+      text-transform: uppercase;
 
-    span  {
-      font-weight: 700;
-      sup {
-        @include init-font(0.7em, 700);
-      }
-    }
-
-    h1, h2 {
-      @include init-font(2.5em, 400);
-      margin-bottom: 0.8em;
-      line-height: 1.1em;
-    }
-
-    p {
-      @include init-font(1.4em, 400);
-      margin-bottom: 0.7em;
-    }
-
-    &.active {
-      position: static;
-      animation: fadeIn 0.9s ease forwards;
+      @include init-font(3rem, 700);
     }
   }
 }
