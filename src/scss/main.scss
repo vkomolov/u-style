@@ -353,6 +353,22 @@ body {
   }
 }
 
+.product-list-item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1em;
+
+  @include init-font(1.5em, 800);
+  @include transition();
+  @include text-shadow(0.05em, 0.05em);
+
+  &:hover {
+    color: $uStyleColor;
+    transform: translateX(0.2em);
+  }
+}
+
 .link-button {
   display: inline-block;
   text-align: center;
