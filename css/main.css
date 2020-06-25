@@ -596,6 +596,21 @@ body {
       font-size: 3rem;
       font-weight: 700; }
 
+.product-list-item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: 800;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.8); }
+  .product-list-item:hover {
+    color: #2b8264;
+    -webkit-transform: translateX(0.2em);
+    transform: translateX(0.2em); }
+
 .link-button {
   display: inline-block;
   text-align: center;
