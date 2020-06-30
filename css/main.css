@@ -776,6 +776,8 @@ body {
       max-width: 100%;
       max-height: 100%;
       height: auto; }
+    .section-wrapper__img_block.total-width {
+      max-width: 100% !important; }
     .section-wrapper__img_block.hovered::before {
       position: absolute;
       top: 0;
