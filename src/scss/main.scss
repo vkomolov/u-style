@@ -563,6 +563,10 @@ body {
 
     @include image-wrapper(width, 100%);
 
+    &.total-width {
+      max-width: 100% !important;
+    }
+
 
     &.hovered {
 
@@ -724,7 +728,4 @@ margin-top: 2em;
 
 .padding-button_clear {
   padding-bottom: 0 !important;
-}
-
-.supper-case {
 }
