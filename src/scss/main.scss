@@ -307,7 +307,7 @@ body {
 .slider-layer {
   position: relative;
   font-size: 0.95rem;
-  min-height: 46em;
+  min-height: 60em;
 
   @include flex-box($flex-box-row-center...);
   @include transition();
