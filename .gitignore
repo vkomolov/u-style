@@ -5,22 +5,22 @@
 # IntelliJ project files
 .idea
 *.iml
-out
-gen
+bin/
+gen/
+out/
 # dependencies
-/node_modules
-node_modules
-/configuration
-/workspace
+**/node_modules/
+**/configuration/
+**/workspace/
 /p2
 /.pnp
 .pnp.js
 
 # testing
-/coverage
+coverage/
 
 # production
-#/build
+[bB]uild/
 
 # misc
 .DS_Store
