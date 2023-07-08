@@ -653,7 +653,7 @@ body {
   .three-in-line {
     flex-basis: 25%;
     //min-width: 27.2em; //will be flexed in column for narrow media
-    //max-width: 21.7em;
+    max-width: 25em !important;
     flex-grow: 1;
   }
 }
